@@ -1,0 +1,88 @@
+//MADRAS background
+@mixin madras_bg {
+  background-color: rgba(234, 148, 37, 0.1); //opacity set by andrey, original opacity is 1
+  $col_opacity_1: 0.1;
+  $col_opacity_2: 0;
+  background-image: repeating-linear-gradient(45deg, transparent 5px, hsla(197, 62%, 11%, $col_opacity_1) 5px, hsla(197, 62%, 11%, $col_opacity_1) 10px,
+    hsla(5, 53%, 63%,$col_opacity_2) 10px, hsla(5, 53%, 63%, $col_opacity_2) 35px, hsla(5, 53%, 63%, $col_opacity_1) 35px, hsla(5, 53%, 63%, $col_opacity_1) 40px,
+    hsla(197, 62%, 11%, $col_opacity_1) 40px, hsla(197, 62%, 11%, $col_opacity_1) 50px, hsla(197, 62%, 11%, $col_opacity_2) 50px, hsla(197, 62%, 11%, $col_opacity_2) 60px,
+    hsla(5, 53%, 63%, $col_opacity_1) 60px, hsla(5, 53%, 63%, $col_opacity_1) 70px, hsla(35, 91%, 65%, $col_opacity_1) 70px, hsla(35, 91%, 65%, $col_opacity_1) 80px,
+    hsla(35, 91%, 65%, $col_opacity_2) 80px, hsla(35, 91%, 65%, $col_opacity_2) 90px, hsla(5, 53%, 63%, $col_opacity_1) 90px, hsla(5, 53%, 63%, $col_opacity_1) 110px,
+    hsla(5, 53%, 63%, $col_opacity_2) 110px, hsla(5, 53%, 63%, $col_opacity_2) 120px, hsla(197, 62%, 11%, $col_opacity_1) 120px, hsla(197, 62%, 11%, $col_opacity_1) 140px
+  ),
+  repeating-linear-gradient(135deg, transparent 5px, hsla(197, 62%, 11%, $col_opacity_1) 5px, hsla(197, 62%, 11%, $col_opacity_1) 10px,
+      hsla(5, 53%, 63%, $col_opacity_2) 10px, hsla(5, 53%, 63%, $col_opacity_2) 35px, hsla(5, 53%, 63%, $col_opacity_1) 35px, hsla(5, 53%, 63%,$col_opacity_1) 40px,
+      hsla(197, 62%, 11%, $col_opacity_1) 40px, hsla(197, 62%, 11%, $col_opacity_1) 50px, hsla(197, 62%, 11%, $col_opacity_2) 50px, hsla(197, 62%, 11%,$col_opacity_2) 60px,
+      hsla(5, 53%, 63%, $col_opacity_1) 60px, hsla(5, 53%, 63%, $col_opacity_1) 70px, hsla(35, 91%, 65%, $col_opacity_1) 70px, hsla(35, 91%, 65%, $col_opacity_1) 80px,
+      hsla(35, 91%, 65%, $col_opacity_2) 80px, hsla(35, 91%, 65%, $col_opacity_2) 90px, hsla(5, 53%, 63%,$col_opacity_1) 90px, hsla(5, 53%, 63%, $col_opacity_1) 110px,
+      hsla(5, 53%, 63%, $col_opacity_2) 110px, hsla(5, 53%, 63%, $col_opacity_2) 140px, hsla(197, 62%, 11%, $col_opacity_1) 140px, hsla(197, 62%, 11%,$col_opacity_1) 160px
+  );
+}
+
+
+//TABLECLOTH background
+@mixin tablecloth_bg($color){
+  background-color:$color;
+  background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+  linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+  background-size:50px 50px;
+}
+
+//MILLIMETER background
+@mixin millimeter_bg($color){
+  background-image:
+    linear-gradient($color*1.1 1px, transparent 1px),
+    linear-gradient(90deg, $color*1.1 1px, transparent 1px),
+    linear-gradient($color 1px, transparent 1px),
+    linear-gradient(90deg, $color 1px, transparent 1px),
+    linear-gradient($color*0.95 1px, transparent 1px),
+    linear-gradient(90deg, $color*0.95 1px, transparent 1px);
+  background-size:
+    100px 100px,
+    100px 100px,
+    5px 5px,
+    5px 5px,
+    20px 20px,
+    20px 20px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    0 0,
+    0 0,
+    -1px -1px,
+    -1px -1px;
+}
+
+//TARTAN background
+@mixin tartan_bg{
+  //opacity:0.4;
+  $col_opacity_1: 0.2;
+  $col_opacity_2: $col_opacity_1 - 0.2;
+  $col_opacity_3: $col_opacity_1 + 0.1;
+  background-color: rgba(160, 48, 44, 0.7);
+  background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,$col_opacity_1) 50px, rgba(0,0,0,$col_opacity_1) 53px, transparent 53px, transparent 63px, rgba(0,0,0,$col_opacity_1) 63px, rgba(0,0,0,$col_opacity_1) 66px, transparent 66px, transparent 116px, rgba(0,0,0,$col_opacity_3) 116px, rgba(0,0,0,$col_opacity_3) 166px, rgba(255,255,255,$col_opacity_2) 166px, rgba(255,255,255,$col_opacity_2) 169px, rgba(0,0,0,$col_opacity_3) 169px, rgba(0,0,0,$col_opacity_3) 179px, rgba(255,255,255,$col_opacity_2) 179px, rgba(255,255,255,$col_opacity_2) 182px, rgba(0,0,0,$col_opacity_3) 182px, rgba(0,0,0,$col_opacity_3) 232px, transparent 232px),
+  repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,$col_opacity_1) 50px, rgba(0,0,0,$col_opacity_1) 53px, transparent 53px, transparent 63px, rgba(0,0,0,$col_opacity_1) 63px, rgba(0,0,0,$col_opacity_1) 66px, transparent 66px, transparent 116px, rgba(0,0,0,$col_opacity_3) 116px, rgba(0,0,0,$col_opacity_3) 166px, rgba(255,255,255,$col_opacity_2) 166px, rgba(255,255,255,$col_opacity_2) 169px, rgba(0,0,0,$col_opacity_3) 169px, rgba(0,0,0,$col_opacity_3) 179px, rgba(255,255,255,$col_opacity_2) 179px, rgba(255,255,255,$col_opacity_2) 182px, rgba(0,0,0,$col_opacity_3) 182px, rgba(0,0,0,$col_opacity_3) 232px, transparent 232px),
+  repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,$col_opacity_2) 2px, rgba(0,0,0,$col_opacity_2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,$col_opacity_2) 5px);
+
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin box-shadow($shadows...) {
+    -moz-box-shadow: $shadows;
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+}
+
+@mixin vert_grad($color_one: #000, $color_two: #fff) {
+    background-image: -webkit-linear-gradient(top, $color_one 0%, $color_two 100%);
+    background-image: linear-gradient(to bottom, $color_one 0%, $color_two 100%);
+}

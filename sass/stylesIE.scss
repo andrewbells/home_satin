@@ -1,0 +1,41 @@
+@import 'reset';
+@import 'fonts';
+
+$color_1:#FFC5A1;
+$color_2:$color_1*1.2;
+$color_3: #D8FFA1;
+
+.wrapper {
+  background: $color_1;
+  padding:100px 0;
+}
+.header{
+  background: $color_2;
+  position: absolute;
+  height:100px;
+  width:100%;
+  top:0;
+}
+.base{
+  margin:0 auto;
+  width:1000px;
+  height:1000px;
+  background: $color_3;
+}
+.footer{
+  background: $color_2;
+  position: absolute;
+  height:100px;
+  width:100%;
+  //bottom: 0;
+}
+.logo{
+  color:#fff;
+  text-transform:uppercase;
+  text-shadow: 2px 2px 2px #000;
+  font:{
+    family:'aquilinetworegular';
+    size:20px;
+    weight:bold;
+  }
+}

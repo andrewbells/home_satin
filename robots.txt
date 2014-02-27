@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Disallow:  /_logs
+Disallow:  /adminpanel
+Disallow:  /cron
+Disallow:  /dropbox
+Disallow:  /orphus
+Disallow:  /video_player
+Disallow:  /orphus
+Disallow:  /video_player
+Disallow:  /rooms/id/
+Disallow:  /index
+
+User-agent: Yandex
+Allow: /
+Disallow:  /en
+Disallow:  /_logs
+Disallow:  /adminpanel
+Disallow:  /cron
+Disallow:  /dropbox
+Disallow:  /orphus
+Disallow:  /video_player
+Disallow:  /orphus
+Disallow:  /video_player
+Disallow:  /rooms/id/
+Disallow:  /index
+
+Sitemap: http://homesatin.com/sitemap.xml
+
