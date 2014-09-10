@@ -618,3 +618,7 @@ a {
   font-size: 20px;
   color: #999;
 }
+
+.test {
+  margin: 0;
+}
